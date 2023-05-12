@@ -1,0 +1,146 @@
+@import url('https://fonts.google.com/specimen/Hanken+Grotesk');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+.left p {
+    color: white;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    display: flex;
+    column-gap: 30px;
+    box-shadow: 0px 0px 20px #eee;
+    border-radius: 25px;
+}
+
+.container .left {
+    background-color: hsl(234, 85%, 45%);
+    width: 57%;
+    padding: 40px 50px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container .left>p:first-child {
+    opacity: 0.8;
+}
+
+.great {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.result {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: hsl(241, 81%, 54%);
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result p span:not(.pers) {
+    opacity: 0.5;
+}
+
+.result p span.pers {
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 1 !important;
+}
+
+.scoor {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.container .right {
+    padding: 40px 10px 0px;
+    width: 40%;
+}
+
+.container .right>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container .right>div .icon-left {
+    display: flex;
+}
+
+.container .right>div .icon-left img {
+    margin-right: 10px;
+}
+
+.container .right .sum {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.container .right p {
+    font-size: 15px;
+}
+
+.button {
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    padding: 15px;
+    background: #777;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: hsl(234, 85%, 45%);
+}
+
+@media (max-width:767px) {
+    .container {
+        width: 100%;
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        min-height: 100vh;
+    }
+    .container .left {
+        width: 100%;
+    }
+    .container .right {
+        width: 100%;
+    }
+}
